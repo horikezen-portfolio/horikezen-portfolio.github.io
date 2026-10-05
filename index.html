@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zen Horike | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #181b22;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --accent: #4f8cff;
+      --border: #2a2e37;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky; top: 0;
+      background: rgba(15,17,21,0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 10;
+    }
+    nav .logo { font-weight: 700; font-size: 18px; }
+    nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 14px; }
+    nav a:hover { color: var(--text); }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+    h1 { font-size: 44px; line-height: 1.15; margin-bottom: 16px; }
+    h2 { font-size: 28px; margin-bottom: 28px; }
+    h2 span { color: var(--accent); }
+    .hero p { font-size: 20px; color: var(--muted); max-width: 720px; }
+    .hero .tag { color: var(--accent); font-weight: 600; margin-bottom: 12px; display: block; }
+    .btns { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      padding: 10px 20px; border-radius: 8px; text-decoration: none;
+      font-weight: 600; font-size: 14px;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .skill-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px;
+    }
+    .skill-card h3 { font-size: 16px; margin-bottom: 12px; }
+    .pill {
+      display: inline-block; background: rgba(79,140,255,0.12);
+      color: var(--accent); border-radius: 999px;
+      padding: 4px 12px; font-size: 13px; margin: 0 6px 8px 0;
+    }
+    .project {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px; margin-bottom: 20px;
+    }
+    .project h3 { font-size: 20px; margin-bottom: 4px; }
+    .project .role { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+    .project p { margin-bottom: 12px; }
+    .project ul { margin: 0 0 16px 20px; color: var(--muted); }
+    .project a.link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px; }
+    footer { padding: 40px 0; text-align: center; color: var(--muted); font-size: 14px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) {
+      h1 { font-size: 32px; }
+      nav a { margin-left: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Zen Horike</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- 1. PERSONAL STATEMENT -->
+    <section class="hero" id="about">
+      <span class="tag">Operations · Supply Chain · Analytics</span>
+      <h1>Hi, I'm Zen Horike.</h1>
+      <p>I'm a Rutgers business student and founder of a 3PL fulfillment company who turns messy logistics data into clear decisions and better-run operations.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="mailto:zh367@scarletmail.rutgers.edu">Contact Me</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/zen-horike-11b6392b5/" target="_blank">LinkedIn</a>
+        <a class="btn btn-outline" href="https://github.com/horikezen-portfolio" target="_blank">GitHub</a>
+      </div>
+    </section>
+
+    <!-- 2. SKILLS -->
+    <section id="skills">
+      <h2><span>02.</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Data & Analytics</h3>
+          <span class="pill">Excel (Pivot Tables, Dashboards)</span>
+          <span class="pill">Python</span>
+          <span class="pill">Machine Learning (LightGBM)</span>
+          <span class="pill">Statistical Sampling</span>
+          <span class="pill">Forecasting</span>
+        </div>
+        <div class="skill-card">
+          <h3>Operations & Supply Chain</h3>
+          <span class="pill">3PL / Warehouse Ops</span>
+          <span class="pill">Freight Spend Analysis</span>
+          <span class="pill">Carrier Benchmarking</span>
+          <span class="pill">Customs / HTS Compliance</span>
+          <span class="pill">Lean Six Sigma (DMAIC)</span>
+        </div>
+        <div class="skill-card">
+          <h3>Tools & Systems</h3>
+          <span class="pill">Epicor ERP</span>
+          <span class="pill">Shopify</span>
+          <span class="pill">Playwright Automation</span>
+          <span class="pill">Carrier APIs (UPS/FedEx)</span>
+          <span class="pill">GitHub</span>
+        </div>
+        <div class="skill-card">
+          <h3>Business & Finance</h3>
+          <span class="pill">Capital Budgeting (NPV, IRR)</span>
+          <span class="pill">Entrepreneurship</span>
+          <span class="pill">Team Leadership</span>
+          <span class="pill">Client Relations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROJECTS -->
+    <section id="projects">
+      <h2><span>03.</span> Projects</h2>
+
+      <div class="project">
+        <h3>ShipNinja – 3PL Fulfillment Company</h3>
+        <div class="role">Founder & Operator · New Jersey</div>
+        <p>Built and run a third-party logistics company serving resellers and apparel brands, with custom software that crosslists client inventory to StockX, Alias, and eBay.</p>
+        <ul>
+          <li>Shipped 21,000+ units in 2026 out of a 3,000 sq ft warehouse</li>
+          <li>Cut pick/pack errors by rolling out unique item-ID barcoding and scan-based workflows</li>
+          <li>Integrated with Shopify and built a PDF-to-form quote automation tool in Playwright</li>
+        </ul>
+        <a class="link" href="https://shipninja.co" target="_blank">Visit shipninja.co →</a>
+      </div>
+
+      <div class="project">
+        <h3>Freight Spend Analysis & Dashboards</h3>
+        <div class="role">Operations Co-op · Stephen Gould Corporation</div>
+        <p>Cleaned and analyzed multi-year freight invoice data to give leadership visibility into carrier spend and savings opportunities.</p>
+        <ul>
+          <li>Built 2024 and 2025 freight spend dashboards covering vendors, branches, agents, and year-over-year trends</li>
+          <li>Designed a statistical sampling plan for rate benchmarking and an LTL carrier RFP</li>
+          <li>Identified shared-facility 3PL consolidation opportunities across company sites</li>
+        </ul>
+        <span class="role">Internal company work – details available on request</span>
+      </div>
+
+      <div class="project">
+        <h3>Financial Distress Prediction Model</h3>
+        <div class="role">Rutgers Business Analytics · Group Project</div>
+        <p>Trained and compared machine learning models to predict corporate financial distress, choosing a decision threshold based on expected profit rather than accuracy alone.</p>
+        <ul>
+          <li>Balanced LightGBM was the top-performing model</li>
+          <li>Tuned the classification threshold (0.3) to maximize modeled profit</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Elevator Throughput Improvement (Lean Six Sigma)</h3>
+        <div class="role">Rutgers Lean Six Sigma · Group Project</div>
+        <p>Applied the full DMAIC process to reduce elevator throughput time, setting a critical-to-quality target of 80 seconds or less.</p>
+        <ul>
+          <li>Defined CTQs, measured baseline performance, and analyzed root causes</li>
+          <li>Proposed and evaluated process improvements with control measures</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Zen Horike · <a href="mailto:zh367@scarletmail.rutgers.edu">zh367@scarletmail.rutgers.edu</a></p>
+  </footer>
+
+</body>
+</html>
